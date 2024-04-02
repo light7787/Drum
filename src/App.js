@@ -72,7 +72,8 @@ function App(){
       <div id="display">{active}</div>
       
       <div className="drum-pads">
-      {drumpads.map((drumpad)=>(<button key={drumpad.keyCode} className="drum-pad btn btn-default ${active === drumpad.text ? 'active' : ''}"
+      {drumpads.map((drumpad)=>(<button key={drumpad.keyCode} className={`drum-pad btn btn-default ${active === drumpad.text ? 'active' : ''}`}
+
        onClick={()=>{
         playSound(drumpad.text);
       }} id={drumpad.src}>
